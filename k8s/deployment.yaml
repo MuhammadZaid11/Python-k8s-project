@@ -1,0 +1,23 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: django-notes-app
+  namespace: dev
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: django-notes-app
+  template:
+    metadata:
+      labels:
+        app: django-notes-app
+    spec:
+      containers:
+        - name: django-notes-app
+          image: django-notes-app:latest
+          ports:
+            - containerPort: 8000
