@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: django-notes-service
+  namespace: dev
+
+spec:
+  selector:
+    app: django-notes
+
+  ports:
+  - port: 80
+    targetPort: 8000
+
+  type: ClusterIP
