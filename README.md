@@ -1,4 +1,7 @@
 # Django Notes App on Kubernetes
+<img width="1366" height="699" alt="Screenshot 2026-06-17 010106" src="https://github.com/user-attachments/assets/2bb2963a-641c-4114-b5d8-f2ed83c460b0" />
+<img width="1366" height="691" alt="note_k8s" src="https://github.com/user-attachments/assets/7b14025b-20ee-477b-b156-25287e2571fe" />
+
 
 ## Project Overview
 
