@@ -1,15 +1,12 @@
-FROM python:3.12-slim
+FROM python:3.9
 
-WORKDIR /app/fullstack_project
+WORKDIR /app/backend
 
-COPY requirements.txt .
+COPY requirements.txt /app/backend
+RUN pip install -r requirements.txt
 
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-RUN python manage.py collectstatic --noinput
+COPY . /app/backend
 
 EXPOSE 8000
 
-CMD ["gunicorn", "notesapp.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
